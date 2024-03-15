@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,6 @@ Route::get('/comic/{index}', function ($index) {
     $comic = $comics[$index];
     return view('layouts.books.comic', compact('comic'));
 })->name('comic');
+
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/{team}', [ComicController::class, 'show'])->name('comics.show');
