@@ -1,0 +1,77 @@
+@use 'variables' as variables;
+
+main {
+    background-color: black;
+}
+
+.content {
+    min-height: 219px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-size: 23px;
+}
+
+.main-menu {
+    background-color: variables.$color;
+    height: 120px;
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.book-card {
+    flex-basis: 15%;
+}
+
+button {
+    padding: 10px;
+    background-color: variables.$color;
+    color: white;
+    border: 1px solid variables.$color;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.book-card {
+    padding: 20px;
+    background-color: transparent;
+    border: lightblue;
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
+
+
+}
+
+.h3-card {
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.img-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+
+}

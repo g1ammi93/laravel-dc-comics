@@ -1,0 +1,77 @@
+@use 'variables' as variables;
+
+.image-bkg {
+    background-image: url('../../resources/img/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.h3-footer {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.ul-footer {
+    margin-top: 30px;
+}
+
+.space-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-row {
+    display: flex;
+    gap: 40px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-dc {
+    width: 380px;
+    margin-top: 10px;
+}
+
+.button-footer {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid variables.$color;
+    cursor: pointer;
+}
+
+.span-footer {
+    color: variables.$color;
+    text-wrap: nowrap;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-footer {
+    height: 100px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.a-footer {
+    color: gray;
+}
+
+li {
+    margin-bottom: 5px;
+}
