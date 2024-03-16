@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $comics = config('comics');
-    return view('home', compact('comics'));
+    // $comics = config('comics');
+    return view('home');
 })->name('home');
 
 // Route::get('/comics', function () {
@@ -25,12 +25,12 @@ Route::get('/', function () {
 // })->name('comics');
 
 
-Route::get('/comic/{index}', function ($index) {
-    $comics = config('comics');
+// Route::get('/comic/{index}', function ($index) {
+//     $comics = config('comics');
 
-    $comic = $comics[$index];
-    return view('layouts.books.comic', compact('comic'));
-})->name('comic');
+//     $comic = $comics[$index];
+//     return view('layouts.books.comic', compact('comic'));
+// })->name('comic');
 
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
-Route::get('/comics/{team}', [ComicController::class, 'show'])->name('comics.show');
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');

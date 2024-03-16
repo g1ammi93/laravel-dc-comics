@@ -2,7 +2,7 @@
     <div class="image-bkg">
         <div class="space-container container">
             <div class="flex-row">
-                <div class="col">
+                <div class="col-footer">
                     <ul class="ul-footer">
                         <li>
                             <h3 class="h3-footer">DC COMICS</h3>
@@ -24,7 +24,7 @@
                         <li><a href="#" class="a-footer">Shop DC Collectibles</a></li>
                     </ul>
                 </div>
-                <ul class="col ul-footer">
+                <ul class="col-footer ul-footer">
                     <li>
                         <h3 class="h3-footer">DC</h3>
                     </li>
@@ -41,7 +41,7 @@
                     <li><a href="#" class="a-footer">Contact Us</a></li>
 
                 </ul>
-                <ul class="col ul-footer">
+                <ul class="col-footer ul-footer">
                     <li>
                         <h3 class="h3-footer">SITES</h3>
                     </li>

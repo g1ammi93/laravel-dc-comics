@@ -9,7 +9,10 @@
 
     <link rel="icon" href="{{ asset('../img/dc-logo.png') }}" type="images/png">
 
+    <link href="{{ asset('scss/app.scss') }}" rel="stylesheet">
     @vite('resources/js/app.js')
+
+
 </head>
 
 
