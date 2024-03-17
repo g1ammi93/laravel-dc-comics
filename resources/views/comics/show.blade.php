@@ -16,4 +16,8 @@
             <p class="comic-p">{{ $comic->description }}</p>
         </div>
     </div>
+    <div class="bg-white d-flex justify-content-between py-3">
+        <a href="{{ route('comics.index') }}" class="btn btn-secondary">Torna Indietro</a>
+        <a href="{{ url("/comics/$comic->id/edit") }}" class="btn btn-warning">Modifica</a>
+    </div>
 @endsection
