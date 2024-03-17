@@ -29,6 +29,8 @@
                 <button class="button-main mb-3">Scoprine Ancora!</button>
             </div>
 
+            <a class="btn btn-success" href="{{ route('comics.create') }}">Crea Comic</a>
+
             {{-- <div class="btn-div justify-center">
             <a href="{{ route('comics.create') }}">ADD A NEW COMIC</a>
         </div> --}}
