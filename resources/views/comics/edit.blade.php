@@ -21,8 +21,9 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
@@ -47,7 +48,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" name="price" class="form-control" id="price" placeholder="Es.: 19.99"
+                        <input type="text" name="price" class="form-control" id="price" placeholder="Es.: 19.99"
                             value="{{ old('price', $comic->price) }}">
                     </div>
                 </div>

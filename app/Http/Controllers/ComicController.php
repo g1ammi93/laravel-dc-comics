@@ -34,7 +34,7 @@ class ComicController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
             'thumb' => 'nullable|url:http,https',
-            'price' => 'required|numeric|min:0',
+            'price' => ['required', 'string', 'regex:/^\$?\d+(\.\d{1,2})?$/'],
             'series' => 'required|string',
             'sale_date' => 'required|date',
             'type' => 'required|string',
@@ -72,9 +72,27 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'thumb' => 'nullable|url:http,https',
+            'price' => ['required', 'string', 'regex:/^\$?\d+(\.\d{1,2})?$/'],
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string'
+        ]);
+
+        $data = $request->all();
+
+        $comic->fill($data);
+
+        $comic->save();
+
+        return to_route('comics.show', $comic->id);
     }
 
     /**
